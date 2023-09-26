@@ -1,0 +1,60 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+
+@layer utilities{
+   
+    .row{
+        margin-left:40px;
+        margin-right:40px;
+    }
+    .row-160{
+        margin-left:140px;
+        margin-right:140px;
+    }
+   
+
+    
+    img{
+        display: inline-block;
+    }
+
+    [x-cloak] {
+        display: none !important;
+      }
+
+
+    /* .btn-card{
+        font-size: 14px;
+        width: 100%;
+        color: #fff;
+        background-color: #7453fc;
+        padding: 12px 30px;
+        display: inline-block;
+        border-radius: 25px;
+        font-weight: 500;
+        text-transform: capitalize;
+        letter-spacing: 0.5px;
+        transition: all .3s;
+        position: relative;
+        overflow: hidden;
+    } */
+
+  
+
+    /* درست شود */
+    /* .img-seciton-4 img{
+        height: -webkit-fill-available;
+    } */
+   
+    a{
+        font-size: 15px;
+        font-weight: 700;
+        color: #7453fc;
+        border-bottom: 1px solid #7453fc;
+    }
+    
+  
+} 

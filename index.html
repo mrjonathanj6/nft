@@ -1,0 +1,575 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>liberty_market</title>
+    <!-- <script src="https://cdn.tailwindcss.com"></script> -->
+    <link rel="stylesheet" href="asset/css/main.css">
+    <script defer src="https://unpkg.com/alpinejs@3.10.5/dist/cdn.min.js"></script>
+    
+
+</head>
+
+<body class="text-right" x-data="{ openMenu : false }":class="openMenu ? 'overflow-hidden' : 'overflow-visible' ">
+
+
+    <!-- section 1 -->
+    <section class="section-1 text-white pb-60 pt-72 bg-no-repeat bg-center bg-cover bg-[url('../../asset/pic/banner-bg.jpg')]">
+
+
+      <!-- menu -->
+      <section class="menu pr-20 pl-20 -mt-64 mb-40">
+
+      
+        <header class="flex justify-between items-center bg-[#282B2F] rounded-full drop-shadow-sm py-4 px-8">
+      
+          <!-- Logo -->
+          <img src="asset/pic/logo.png" alt="logo">
+      
+          <!-- Mobile Menu Toggle -->
+          <button class="flex md:hidden flex-col items-center align-middle" @click="openMenu = !openMenu"
+            :aria-expanded="openMenu" aria-controls="mobile-navigation" aria-label="Navigation Menu">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+            </svg>
+            <span class="text-xs">menu</span>
+          </button>
+      
+          <!-- Main Navigations -->
+          <nav class="hidden md:flex ">
+      
+            <ul class="flex flex-row gap-2 text-right">
+              <li>
+                <a href="#" class="inline-flex py-2 px-3 hover:bg-slate-200 rounded">About us</a>
+              </li>
+              <li>
+                <a href="#" class="inline-flex py-2 px-3 hover:bg-slate-200 rounded">Blog</a>
+              </li>
+              <li>
+                <a href="#" class="inline-flex py-2 px-3 hover:bg-slate-200 rounded">Contact us</a>
+              </li>
+              <li>
+                <a href="#" class="inline-flex py-2 px-3 bg-slate-200 rounded" aria-current="true">Home</a>
+              </li>
+            </ul>
+      
+          </nav>
+      
+        </header>
+      
+        <!-- Pop Out Navigation -->
+        <nav id="mobile-navigation" class="fixed top-0 right-0 bottom-0 left-0 backdrop-blur-sm z-10"
+          :class="openMenu ? 'visible' : 'invisible' " x-cloak>
+      
+          <!-- UL Links -->
+          <ul class="absolute top-0 right-0 bottom-0 w-10/12 py-4 bg-[#282B2F] drop-shadow-2xl z-10 transition-all"
+            :class="openMenu ? 'translate-x-0' : 'translate-x-full'">
+      
+            <li class="border-b border-inherit">
+              <a href="#" class="block p-4" aria-current="true">Home</a>
+            </li>
+            <li class="border-b border-inherit">
+              <a href="#" class="block p-4">About us</a>
+            </li>
+            <li class="border-b border-inherit">
+              <a href="#" class="block p-4">Blog</a>
+            </li>
+            <li class="border-b border-inherit">
+              <a href="#" class="block p-4">Contact us</a>
+            </li>
+      
+          </ul>
+      
+          <!-- Close Button -->
+          <button class="absolute top-0 right-0 bottom-0 left-0" @click="openMenu = !openMenu" :aria-expanded="openMenu"
+            aria-controls="mobile-navigation" aria-label="Close Navigation Menu">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 absolute top-2 left-2" fill="none" viewBox="0 0 24 24"
+              stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+            </svg>
+          </button>
+      
+        </nav>
+      
+      
+  
+  
+      </section>
+
+
+
+      <sectoin class="container-fluid mx-auto">
+        <section class="row">
+          <section class="grid grid-cols-1 gap-x-12 gap-y-12 sm:grid-cols-1 md:grid-cols-1 lg:grid-cols-2 ">
+            <section class="text-section-1 text-left sm:pl-12 pt-10 ">
+              <h6 class="font-xl font-medium">Liberty NFT Market</h6>
+              <h2 class="mt-4 text-5xl font-bold">CREATE, SELL & COLLECT TOP NFT’S.</h2>
+              <p class="mt-5 text-justify">Liberty NFT Market is a really cool and professional design for your NFT websites. This HTML CSS template is based 
+                on Bootstrap v5 and it is designed for NFT related web portals.</p>
+              <button class="mt-5 inline-flex justify-center rounded-full border border-slate-500 border-b-indigo-50  py-2 px-4 text-lg font-bold text-white shadow-sm hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2">explor top nfts</button>
+              <button class="mt-5 inline-flex justify-center rounded-full border border-transparent bg-indigo-600 py-2 border-b-indigo-50 px-4 text-lg font-bold text-white shadow-sm hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2">whatch our videos</button>
+            </section>
+            <section class="img-section-1 sm:text-center md:text-center">
+              <img src="asset/pic/banner-01.png" class="w-auto h-auto" alt="img">
+            </section>
+          </section>
+        </section>
+      </sectoin>
+    </section>
+    
+
+
+    <!-- section 2 -->
+    <section class="section-2 text-white pt-32 pb-32 bg-[url('../../asset/pic/dark-bg.jpg')]">
+      <section class="container-fluid mx-auto">
+        <section class="row">
+          <section class="grid grid-cols-1">
+            <section class="row">
+              <section class="grid grid-cols-1">
+                  <section class="title-section-2-1 text-center text-3xl font-bold text-white">Browse Through Our Categories Here.</section>
+              </section>
+              <section class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-6 gap-5 mt-20">
+
+
+                <!-- box item -->
+                <section class="text-center p-8 rounded-3xl border-[1px] border-solid border-[#404245] bg-[#282b2f]">
+                  <section class="icon-box-item w-[62px] h-[62px] text-center leading-[62px] bg-[#fff] rounded-[50%] inline-block	">
+                    <img src="asset/pic/icon-01.png" class="" alt="icon box item">
+                  </section>
+                  <h4>block chain</h4>
+                </section>
+                <section class="text-center p-8 rounded-3xl border-[1px] border-solid border-[#404245] bg-[#282b2f]">
+                  <section class="icon-box-item w-[62px] h-[62px] text-center leading-[62px] bg-[#fff] rounded-[50%] inline-block	">
+                    <img src="asset/pic/icon-01.png" class="" alt="icon box item">
+                  </section>
+                  <h4>block chain</h4>
+                </section>
+                <section class="text-center p-8 rounded-3xl border-[1px] border-solid border-[#404245] bg-[#282b2f]">
+                  <section class="icon-box-item w-[62px] h-[62px] text-center leading-[62px] bg-[#fff] rounded-[50%] inline-block	">
+                    <img src="asset/pic/icon-01.png" class="" alt="icon box item">
+                  </section>
+                  <h4>block chain</h4>
+                </section>
+                <section class="text-center p-8 rounded-3xl border-[1px] border-solid border-[#404245] bg-[#282b2f]">
+                  <section class="icon-box-item w-[62px] h-[62px] text-center leading-[62px] bg-[#fff] rounded-[50%] inline-block	">
+                    <img src="asset/pic/icon-01.png" class="" alt="icon box item">
+                  </section>
+                  <h4>block chain</h4>
+                </section>
+                <section class="text-center p-8 rounded-3xl border-[1px] border-solid border-[#404245] bg-[#282b2f]">
+                  <section class="icon-box-item w-[62px] h-[62px] text-center leading-[62px] bg-[#fff] rounded-[50%] inline-block	">
+                    <img src="asset/pic/icon-01.png" class="" alt="icon box item">
+                  </section>
+                  <h4>block chain</h4>
+                </section>
+                <section class="text-center p-8 rounded-3xl border-[1px] border-solid border-[#404245] bg-[#282b2f]">
+                  <section class="icon-box-item w-[62px] h-[62px] text-center leading-[62px] bg-[#fff] rounded-[50%] inline-block	">
+                    <img src="asset/pic/icon-01.png" class="" alt="icon box item">
+                  </section>
+                  <h4>block chain</h4>
+                </section>
+            
+
+              </section>
+            </section>
+          </section>
+
+          <section class="grid grid-cols-1 pt-32">
+            <section class="row">
+              <section class="grid grid-cols-1">
+                  <section class="title-section-2-1 text-center text-3xl font-bold text-white">Explore Some Hot Collections In Market.</section>
+              </section>
+              <section class="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 mt-20">
+
+                <section class="card">
+                  <img src="asset/pic/collection-01.jpg" class="w-full rounded-t-3xl" alt="card img">
+
+                  <!-- border: 1px solid #404245; -->
+
+
+                  <!-- content-card -->
+                  <section class="p-8 bg-[#282b2f] border-[1px] border-solid border-[#404245] rounded-b-3xl">
+
+                    <h4 class="text-xl mb-5 border-b-[1px] border-solid border-b-gray-500 pb-5">Genesis Collective Statue</h4>
+                   
+
+                    <span class="text-white inline-block float-left w-1/2 text-base text-left">
+                      Items In Collection:
+                      <br>
+                      <strong class="text-xl">457/485</strong>
+                    </span>
+                    <span class="text-white inline-block w-1/2 text-base text-right">
+                      Category:
+                      <br>
+                      <strong class="text-xl">Music art</strong>
+                    </span>
+                  
+                      <button class="btn-card top-8 mt-5 -mb-16 text-white font-medium text-sm inline-block w-full p-3 relative overflow-hidden justify-center rounded-full border border-transparent bg-indigo-600  border-b-indigo-50 shadow-sm hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2">submit</button>
+                  </section>
+                </section>
+                <section class="card">
+                  <img src="asset/pic/collection-01.jpg" class="w-full rounded-t-3xl" alt="card img">
+
+                  <!-- border: 1px solid #404245; -->
+
+
+                  <!-- content-card -->
+                  <section class="p-8 bg-[#282b2f] border-[1px] border-solid border-[#404245] rounded-b-3xl">
+
+                    <h4 class="text-xl mb-5 border-b-[1px] border-solid border-b-gray-500 pb-5">Genesis Collective Statue</h4>
+                   
+
+                    <span class="text-white inline-block float-left w-1/2 text-base text-left">
+                      Items In Collection:
+                      <br>
+                      <strong class="text-xl">457/485</strong>
+                    </span>
+                    <span class="text-white inline-block w-1/2 text-base text-right">
+                      Category:
+                      <br>
+                      <strong class="text-xl">Music art</strong>
+                    </span>
+                  
+                      <button class="btn-card top-8 mt-5 -mb-16 text-white font-medium text-sm inline-block w-full p-3 relative overflow-hidden justify-center rounded-full border border-transparent bg-indigo-600  border-b-indigo-50 shadow-sm hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2">submit</button>
+                  </section>
+                </section>
+                <section class="card">
+                  <img src="asset/pic/collection-01.jpg" class="w-full rounded-t-3xl" alt="card img">
+
+                  <!-- border: 1px solid #404245; -->
+
+
+                  <!-- content-card -->
+                  <section class="p-8 bg-[#282b2f] border-[1px] border-solid border-[#404245] rounded-b-3xl">
+
+                    <h4 class="text-xl mb-5 border-b-[1px] border-solid border-b-gray-500 pb-5">Genesis Collective Statue</h4>
+                   
+
+                    <span class="text-white inline-block float-left w-1/2 text-base text-left">
+                      Items In Collection:
+                      <br>
+                      <strong class="text-xl">457/485</strong>
+                    </span>
+                    <span class="text-white inline-block w-1/2 text-base text-right">
+                      Category:
+                      <br>
+                      <strong class="text-xl">Music art</strong>
+                    </span>
+                  
+                      <button class="btn-card top-8 mt-5 -mb-16 text-white font-medium text-sm inline-block w-full p-3 relative overflow-hidden justify-center rounded-full border border-transparent bg-indigo-600  border-b-indigo-50 shadow-sm hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2">submit</button>
+                  </section>
+                </section>
+
+              
+              </section>
+            </section>
+          </section>
+
+
+        </section>
+      </section>
+    </section>
+
+
+    
+    <!-- section 3 -->
+    <section class="section-3 pt-32 pb-32 text-white bg-[url('../../asset/pic/main-bg.jpg')]">
+      <section class="container-fluid mx-auto">
+        <section class="row">
+          <seciton class="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-2">
+            <!-- btn seciton 3 -->
+            <section class="text-center mb-14 md:text-left sm:text-center sm:mb-14">
+              <button class=" rounded-full border border-transparent bg-indigo-600 py-2 border-b-indigo-50 px-4 text-sm font-medium text-white shadow-sm hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2">Create Your NFT Now</button>
+            </section>
+            <section class="title-section-3  mb-20 text-right">
+              <h2 class="font-bold text-3xl">Create Your NFT & Put It On The Market.</h2>
+            </section>
+          </seciton>
+            
+
+          <section class="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
+
+            <section class="box-section-3 ">
+              <section class=" w-16 h-16 inline-block mr-7 mb-5 text-center bg-[#fff] rounded-[50%] leading-[62px]">
+                <img src="asset/pic/icon-01.png" alt="img box section3 icon">
+              </section>
+              <h4 class="text-base mr-8 mb-4 font-bold">Set Up Your Wallet</h4>
+              <p class="mr-8 text-base">NFT means Non-Fungible Token that are used in digital cryptocurrency markets. There are many different kinds of NFTs in the industry.</p>
+            </section>
+
+            <section class="box-section-3 ">
+              <section class=" w-16 h-16 inline-block mr-7 mb-5 text-center bg-[#fff] rounded-[50%] leading-[62px]">
+                <img src="asset/pic/icon-01.png" alt="img box section3 icon">
+              </section>
+              <h4 class="text-base mr-8 mb-4 font-bold">Set Up Your Wallet</h4>
+              <p class="mr-8 text-base">NFT means Non-Fungible Token that are used in digital cryptocurrency markets. There are many different kinds of NFTs in the industry.</p>
+            </section>
+
+            <section class="box-section-3 ">
+              <section class=" w-16 h-16 inline-block mr-7 mb-5 text-center bg-[#fff] rounded-[50%] leading-[62px]">
+                <img src="asset/pic/icon-01.png" alt="img box section3 icon">
+              </section>
+              <h4 class="text-base mr-8 mb-4 font-bold">Set Up Your Wallet</h4>
+              <p class="mr-8 text-base">NFT means Non-Fungible Token that are used in digital cryptocurrency markets. There are many different kinds of NFTs in the industry.</p>
+            </section>
+            
+          </section>  
+          
+        </section>
+      </section>
+    </section>
+
+
+
+
+    <!-- section 4 -->
+    <section class="section-4 pt-32 pb-32 text-white bg-[url('../../asset/pic/dark-bg.jpg')]">
+      <section class="container-fluid mx-auto">
+        <section class="row md:row-160 lg:row-160">
+          <section class="grid grid-cols-1 text-center">
+            <h2 class="text-3xl font-bold">Items Currently In The Market.</h2>
+          </section>
+          <section class="grid grid-cols-1 pt-24 sm:grid-cols-1 md:grid-cols-1 lg:grid-cols-2 gap-x-10 ">
+
+
+            <!-- card section 4 -->
+       
+            <section class="rounded-3xl p-8 mb-8 bg-[#282b2f] border-solid border-[#404245] sm:flex">
+              <section class="content-section-4 pr-5 md:w-[55%] ">
+                <h4 class="text-xl mb-6 font-bold">Music Art Super Item</h4>
+                <span class="flex justify-end">
+                  <h6 class=" text-sm mb-6 font-normal pr-5">Liberty Artist
+                    <br>
+                    <a href="#" class="font-bold mt-1">@libertyart</a>
+                  </h6>
+                  <img src="asset/pic/author.jpg" class="rounded-full max-w-full " alt="author img">
+                </span>
+
+                <section class="line-section-4 w-full h-1 mb-6 mt-7 bg-[#282B2F]"></section>
+                <span class="bid text-left leading-9 float-left text-sm">
+                  Current Bid
+                  <br>
+                  <strong>2.03 ETH</strong>
+                  <br>
+                  <em>($45981)</em>
+                </span>
+                <span class="end leading-9 text-right  text-sm  ">
+                  Ends In
+                  <br>
+                  <strong>4D 08H 15M 42S</strong>
+                  <br>
+                  <em>(July 24th, 2022)</em>
+                </span>
+                <secotin class="btn-section-4 mt-10 float-right">
+                  <a href="#" class="text-sm font-bold">View Item Details</a>
+                </secotin>
+              </section>
+              <section class="img-section-4 text-center md:text-right">
+                <img src="asset/pic/market-01.jpg" class="rounded-3xl ml-5" style="height: -webkit-fill-available;" alt="img section 4">
+              </section>
+            </section>
+
+            <section class="rounded-3xl p-8 mb-8 bg-[#282b2f] border-solid border-[#404245] sm:flex">
+              <section class="content-section-4 pr-5 md:w-[55%] ">
+                <h4 class="text-xl mb-6 font-bold">Music Art Super Item</h4>
+                <span class="flex justify-end">
+                  <h6 class=" text-sm mb-6 font-normal pr-5">Liberty Artist
+                    <br>
+                    <a href="#" class="font-bold mt-1">@libertyart</a>
+                  </h6>
+                  <img src="asset/pic/author.jpg" class="rounded-full max-w-full " alt="author img">
+                </span>
+
+                <section class="line-section-4 w-full h-1 mb-6 mt-7 bg-[#282B2F]"></section>
+                <span class="bid text-left leading-9 float-left text-sm">
+                  Current Bid
+                  <br>
+                  <strong>2.03 ETH</strong>
+                  <br>
+                  <em>($45981)</em>
+                </span>
+                <span class="end leading-9 text-right  text-sm  ">
+                  Ends In
+                  <br>
+                  <strong>4D 08H 15M 42S</strong>
+                  <br>
+                  <em>(July 24th, 2022)</em>
+                </span>
+                <secotin class="btn-section-4 mt-10 float-right">
+                  <a href="#" class="text-sm font-bold">View Item Details</a>
+                </secotin>
+              </section>
+              <section class="img-section-4 text-center md:text-right">
+                <img src="asset/pic/market-01.jpg" class="rounded-3xl ml-5" style="height: -webkit-fill-available;" alt="img section 4">
+              </section>
+            </section>
+            
+            <section class="rounded-3xl p-8 mb-8 bg-[#282b2f] border-solid border-[#404245] sm:flex">
+              <section class="content-section-4 pr-5 md:w-[55%] ">
+                <h4 class="text-xl mb-6 font-bold">Music Art Super Item</h4>
+                <span class="flex justify-end">
+                  <h6 class=" text-sm mb-6 font-normal pr-5">Liberty Artist
+                    <br>
+                    <a href="#" class="font-bold mt-1">@libertyart</a>
+                  </h6>
+                  <img src="asset/pic/author.jpg" class="rounded-full max-w-full " alt="author img">
+                </span>
+
+                <section class="line-section-4 w-full h-1 mb-6 mt-7 bg-[#282B2F]"></section>
+                <span class="bid text-left leading-9 float-left text-sm">
+                  Current Bid
+                  <br>
+                  <strong>2.03 ETH</strong>
+                  <br>
+                  <em>($45981)</em>
+                </span>
+                <span class="end leading-9 text-right  text-sm  ">
+                  Ends In
+                  <br>
+                  <strong>4D 08H 15M 42S</strong>
+                  <br>
+                  <em>(July 24th, 2022)</em>
+                </span>
+                <secotin class="btn-section-4 mt-10 float-right">
+                  <a href="#" class="text-sm font-bold">View Item Details</a>
+                </secotin>
+              </section>
+              <section class="img-section-4 text-center md:text-right">
+                <img src="asset/pic/market-01.jpg" class="rounded-3xl ml-5" style="height: -webkit-fill-available;" alt="img section 4">
+              </section>
+            </section>
+            
+            <section class="rounded-3xl p-8 mb-8 bg-[#282b2f] border-solid border-[#404245] sm:flex">
+              <section class="content-section-4 pr-5 md:w-[55%] ">
+                <h4 class="text-xl mb-6 font-bold">Music Art Super Item</h4>
+                <span class="flex justify-end">
+                  <h6 class=" text-sm mb-6 font-normal pr-5">Liberty Artist
+                    <br>
+                    <a href="#" class="font-bold mt-1">@libertyart</a>
+                  </h6>
+                  <img src="asset/pic/author.jpg" class="rounded-full max-w-full " alt="author img">
+                </span>
+
+                <section class="line-section-4 w-full h-1 mb-6 mt-7 bg-[#282B2F]"></section>
+                <span class="bid text-left leading-9 float-left text-sm">
+                  Current Bid
+                  <br>
+                  <strong>2.03 ETH</strong>
+                  <br>
+                  <em>($45981)</em>
+                </span>
+                <span class="end leading-9 text-right  text-sm  ">
+                  Ends In
+                  <br>
+                  <strong>4D 08H 15M 42S</strong>
+                  <br>
+                  <em>(July 24th, 2022)</em>
+                </span>
+                <secotin class="btn-section-4 mt-10 float-right">
+                  <a href="#" class="text-sm font-bold">View Item Details</a>
+                </secotin>
+              </section>
+              <section class="img-section-4 text-center md:text-right">
+                <img src="asset/pic/market-01.jpg" class="rounded-3xl ml-5" style="height: -webkit-fill-available;" alt="img section 4">
+              </section>
+            </section>
+            
+            <section class="rounded-3xl p-8 mb-8 bg-[#282b2f] border-solid border-[#404245] sm:flex">
+              <section class="content-section-4 pr-5 md:w-[55%] ">
+                <h4 class="text-xl mb-6 font-bold">Music Art Super Item</h4>
+                <span class="flex justify-end">
+                  <h6 class=" text-sm mb-6 font-normal pr-5">Liberty Artist
+                    <br>
+                    <a href="#" class="font-bold mt-1">@libertyart</a>
+                  </h6>
+                  <img src="asset/pic/author.jpg" class="rounded-full max-w-full " alt="author img">
+                </span>
+
+                <section class="line-section-4 w-full h-1 mb-6 mt-7 bg-[#282B2F]"></section>
+                <span class="bid text-left leading-9 float-left text-sm">
+                  Current Bid
+                  <br>
+                  <strong>2.03 ETH</strong>
+                  <br>
+                  <em>($45981)</em>
+                </span>
+                <span class="end leading-9 text-right  text-sm  ">
+                  Ends In
+                  <br>
+                  <strong>4D 08H 15M 42S</strong>
+                  <br>
+                  <em>(July 24th, 2022)</em>
+                </span>
+                <secotin class="btn-section-4 mt-10 float-right">
+                  <a href="#" class="text-sm font-bold">View Item Details</a>
+                </secotin>
+              </section>
+              <section class="img-section-4 text-center md:text-right">
+                <img src="asset/pic/market-01.jpg" class="rounded-3xl ml-5" style="height: -webkit-fill-available;" alt="img section 4">
+              </section>
+            </section>
+            
+            <section class="rounded-3xl p-8 mb-8 bg-[#282b2f] border-solid border-[#404245] sm:flex">
+              <section class="content-section-4 pr-5 md:w-[55%] ">
+                <h4 class="text-xl mb-6 font-bold">Music Art Super Item</h4>
+                <span class="flex justify-end">
+                  <h6 class=" text-sm mb-6 font-normal pr-5">Liberty Artist
+                    <br>
+                    <a href="#" class="font-bold mt-1">@libertyart</a>
+                  </h6>
+                  <img src="asset/pic/author.jpg" class="rounded-full max-w-full " alt="author img">
+                </span>
+
+                <section class="line-section-4 w-full h-1 mb-6 mt-7 bg-[#282B2F]"></section>
+                <span class="bid text-left leading-9 float-left text-sm">
+                  Current Bid
+                  <br>
+                  <strong>2.03 ETH</strong>
+                  <br>
+                  <em>($45981)</em>
+                </span>
+                <span class="end leading-9 text-right  text-sm  ">
+                  Ends In
+                  <br>
+                  <strong>4D 08H 15M 42S</strong>
+                  <br>
+                  <em>(July 24th, 2022)</em>
+                </span>
+                <secotin class="btn-section-4 mt-10 float-right">
+                  <a href="#" class="text-sm font-bold">View Item Details</a>
+                </secotin>
+              </section>
+              <section class="img-section-4 text-center md:text-right">
+                <img src="asset/pic/market-01.jpg" class="rounded-3xl ml-5" style="height: -webkit-fill-available;" alt="img section 4">
+              </section>
+            </section>
+            
+            
+
+          </section>
+        </section>
+      </section>
+    </section>
+
+
+
+
+    <!-- footer -->
+    <section class="text-center pt-6 pb-6 text-white bg-gradient-to-r from-violet-500 to-fuchsia-500">
+      <p> Copyright © 2022 </p>
+      <p> Designed by <a href="http://www.modinoweb.ir"> modinoweb</a> </p>
+    </section>
+
+
+      
+      
+
+      
+
+   
+
+    
+</body>
+</html>
